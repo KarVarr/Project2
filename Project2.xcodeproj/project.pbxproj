@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17102B3129411E6F00CB7B3B /* ScreeniPhone14.png in Resources */ = {isa = PBXBuildFile; fileRef = 17102B2E29411E6E00CB7B3B /* ScreeniPhone14.png */; };
+		17102B3229411E6F00CB7B3B /* ScreeniPhone14-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 17102B2F29411E6F00CB7B3B /* ScreeniPhone14-3.png */; };
+		17102B3329411E6F00CB7B3B /* ScreeniPhone14-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17102B3029411E6F00CB7B3B /* ScreeniPhone14-2.png */; };
 		174FB520293FBEAF002D25BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FB51F293FBEAF002D25BA /* AppDelegate.swift */; };
 		174FB522293FBEAF002D25BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FB521293FBEAF002D25BA /* SceneDelegate.swift */; };
 		174FB524293FBEAF002D25BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FB523293FBEAF002D25BA /* ViewController.swift */; };
@@ -16,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17102B2D29411D4400CB7B3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17102B2E29411E6E00CB7B3B /* ScreeniPhone14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreeniPhone14.png; sourceTree = "<group>"; };
+		17102B2F29411E6F00CB7B3B /* ScreeniPhone14-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScreeniPhone14-3.png"; sourceTree = "<group>"; };
+		17102B3029411E6F00CB7B3B /* ScreeniPhone14-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScreeniPhone14-2.png"; sourceTree = "<group>"; };
 		174FB51C293FBEAF002D25BA /* Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174FB51F293FBEAF002D25BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174FB521293FBEAF002D25BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +47,7 @@
 		174FB513293FBEAF002D25BA = {
 			isa = PBXGroup;
 			children = (
+				17102B2D29411D4400CB7B3B /* README.md */,
 				174FB51E293FBEAF002D25BA /* Project2 */,
 				174FB51D293FBEAF002D25BA /* Products */,
 			);
@@ -63,6 +71,9 @@
 				174FB528293FBEB1002D25BA /* Assets.xcassets */,
 				174FB52A293FBEB1002D25BA /* LaunchScreen.storyboard */,
 				174FB52D293FBEB1002D25BA /* Info.plist */,
+				17102B2E29411E6E00CB7B3B /* ScreeniPhone14.png */,
+				17102B2F29411E6F00CB7B3B /* ScreeniPhone14-3.png */,
+				17102B3029411E6F00CB7B3B /* ScreeniPhone14-2.png */,
 			);
 			path = Project2;
 			sourceTree = "<group>";
@@ -125,6 +136,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17102B3229411E6F00CB7B3B /* ScreeniPhone14-3.png in Resources */,
+				17102B3329411E6F00CB7B3B /* ScreeniPhone14-2.png in Resources */,
+				17102B3129411E6F00CB7B3B /* ScreeniPhone14.png in Resources */,
 				174FB52C293FBEB1002D25BA /* LaunchScreen.storyboard in Resources */,
 				174FB529293FBEB1002D25BA /* Assets.xcassets in Resources */,
 				174FB527293FBEAF002D25BA /* Main.storyboard in Resources */,
