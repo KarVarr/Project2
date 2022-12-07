@@ -12,10 +12,13 @@ class ViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     
+   
+    @IBOutlet var scorePoints: UILabel!
     
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    
     
     
     override func viewDidLoad() {
@@ -23,22 +26,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         countries += ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "Uk", "Us"]
+       let buttons = [button1, button2, button3]
         
-        button1.layer.borderWidth = 1
-        button2.layer.borderWidth = 1
-        button3.layer.borderWidth = 1
-        button1.layer.borderColor = UIColor.blue.cgColor
-        button2.layer.borderColor = UIColor.green.cgColor
-        button3.layer.borderColor = UIColor.red.cgColor
+        for button in buttons {
+            button?.layer.shadowRadius = 10
+            button?.layer.shadowOpacity = 1.0
+            button?.layer.shadowOffset = CGSize(width: 3, height: 3)
+            button?.layer.shadowColor = UIColor.gray.cgColor
+        }
+        
         
         
         
         askQuestion()
     }
     func askQuestion(action: UIAlertAction! = nil)  {
+        view.backgroundColor = UIColor.systemMint
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
+        
+        
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -52,9 +60,13 @@ class ViewController: UIViewController {
         if correctAnswer == answer {
             title = "You are win !!!💪"
             score += 1
+            scorePoints.text = "Score: \(score)"
+            view.backgroundColor = UIColor.green
         } else {
             title = "LOSER !!!"
             score -= 1
+            scorePoints.text = "Score: \(score)"
+            view.backgroundColor = UIColor.red
         }
         
         let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
