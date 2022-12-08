@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     var correctAnswer = 0
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -57,13 +56,16 @@ class ViewController: UIViewController {
         let answer = sender.tag
         var title: String
         
+        
+        
+        
         if correctAnswer == answer {
             title = "You are win !!!💪"
             score += 1
             scorePoints.text = "Score: \(score)"
             view.backgroundColor = UIColor.green
         } else {
-            title = "LOSER !!!"
+            title = "LOSER, correct \(countries[correctAnswer])"
             score -= 1
             scorePoints.text = "Score: \(score)"
             view.backgroundColor = UIColor.red
@@ -73,6 +75,9 @@ class ViewController: UIViewController {
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true)
         
+        let ac2 = UIAlertController(title: "10 question asked", message: "You taped 10 times", preferredStyle: .alert)
+        ac2.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(ac2, animated: true)
     }
     
     
