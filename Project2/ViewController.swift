@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(scoreButton))
+        
         countries += ["Estonia", "France", "Germany", "Ireland", "Italy", "Monaco", "Nigeria", "Poland", "Russia", "Spain", "Uk", "Us"]
        let buttons = [button1, button2, button3]
         
@@ -34,9 +36,6 @@ class ViewController: UIViewController {
             button?.layer.shadowColor = UIColor.gray.cgColor
         }
         
-        
-        
-        
         askQuestion()
     }
     func askQuestion(action: UIAlertAction! = nil)  {
@@ -44,8 +43,6 @@ class ViewController: UIViewController {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
-        
-        
         
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
@@ -55,9 +52,6 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         let answer = sender.tag
         var title: String
-        
-        
-        
         
         if correctAnswer == answer {
             title = "You are win !!!💪"
@@ -78,6 +72,15 @@ class ViewController: UIViewController {
         let ac2 = UIAlertController(title: "10 question asked", message: "You taped 10 times", preferredStyle: .alert)
         ac2.addAction(UIAlertAction(title: "Ok", style: .default))
         present(ac2, animated: true)
+    }
+    
+    @objc func scoreButton () {
+        
+        
+        
+        let vc = UIActivityViewController(activityItems: [score], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     
