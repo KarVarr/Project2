@@ -72,6 +72,11 @@ class ViewController: UIViewController {
         let ac2 = UIAlertController(title: "10 question asked", message: "You taped 10 times", preferredStyle: .alert)
         ac2.addAction(UIAlertAction(title: "Ok", style: .default))
         present(ac2, animated: true)
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5) {
+            sender.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }
+        sender.transform = CGAffineTransform(scaleX: 1, y: 1)
     }
     
     @objc func scoreButton () {
